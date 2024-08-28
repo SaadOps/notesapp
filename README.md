@@ -11,6 +11,25 @@ This is a simple notes app built with React and Django.
 ```
 git clone https://github.com/SaadOps/notesapp.git
 ```
+## Run with Docker
+2. Build the app
+```
+docker build -t notes-app .
+```
+
+3. Run the app
+```
+docker run -d -p 8000:8000 notes-app:latest
+```
+
+## Nginx
+
+Install Nginx reverse proxy to make this application available
+
+`sudo apt-get update`
+`sudo apt install nginx`
+
+## Run on Localhost
 2. Create a virtual environment and activate it
 ```
 virtualenv venv
@@ -38,7 +57,3 @@ npm install
 ```
 npm start
 ```
-
-## Deployment
-App is deployed on Railway: [Notes App](https://notesapp-production-8c87.up.railway.app/)  
-Refer this article on how to: [deploy a django app on Railway](https://dev.to/osahenru/using-railway-app-to-deploy-your-django-project-3ah1)
